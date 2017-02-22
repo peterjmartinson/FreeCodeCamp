@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Free Code Camp Viewer</title>
+
+  <!-- STYLESHEET --> 
+    <link rel="stylesheet" href="css/style.css" />
+
+  <!-- JAVASCRIPT -->
+    <script src="js/lib/angular.js"></script>
+    <script src="js/lib/angular-route.min.js"></script>
+    <script src="js/modules/fcc.js"></script>
+</head>
+<body ng-app="fccapp">
+  
+  <nav>
+    <fcc-nav>Navigation links - list selector? (directive)</fcc-nav>
+  </nav>
+
+  <main>
+    <div class="container">
+    <header>
+      <fcc-header>Description of the page (directive)</fcc-header>
+    </header>
+    </div>
+    
+    <div class="container">
+    <article>
+      <div ng-view>Angular did not work!</div>
+    </article>
+    </div>
+
+    <footer>
+      <fcc-footer>Bye! (directive)</fcc-footer>
+    </footer>
+  </main>
+
+</body>
+</html>

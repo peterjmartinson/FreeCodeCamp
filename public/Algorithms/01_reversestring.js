@@ -1,3 +1,4 @@
+// TITLE: Reverse the String
 
 function reverseString(str) {
   var strArray = str.split('');
