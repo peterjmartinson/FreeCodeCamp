@@ -8,11 +8,11 @@ $(document).ready(function() {
 
   $.get( "/Algorithms/01_reversestring.js", function (response) {
     var fileText = response;
-    var oneChar = fileText.substring(0,1);
+    var oneChar = fileText.substring(0,2);
     console.log("oneChar = " + oneChar);
-    console.log("response\n--------\n" + fileText);
+    console.log("response\n--------\n" + htmlCarriageReturned(fileText));
 
-    $("#file-text").html( fileText );
+    $("#file-text").html( htmlCarriageReturned(fileText) );
     // PROBLEM: carriage returns not honored
     // SOLUTION: replace <cr> with <br />
 
@@ -22,8 +22,10 @@ $(document).ready(function() {
   });
 
   var htmlCarriageReturned = function( txt ) {
-    var matchText = \\\\r\;
-    return matchText.replace(txt,"<br>");
+    var returnTxt = txt.replace(/\n/g,'<br>');
+    var returnTxt2 = returnTxt.replace(/^\s/g,'&nbsp;');
+    // returnTxt = returnTxt.replace(/&nbsp;\s/,'&nbsp;&nbsp;');
+    return returnTxt;
   }
 
 
