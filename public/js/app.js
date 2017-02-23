@@ -22,11 +22,8 @@ $(document).ready(function() {
   });
 
   var htmlCarriageReturned = function( txt ) {
-    var returnTxt = txt.replace(/\n/g,'<br>');
-    var returnTxt2 = returnTxt.replace(/^\s/g,'&nbsp;');
-    // returnTxt = returnTxt.replace(/&nbsp;\s/,'&nbsp;&nbsp;');
-    return returnTxt;
-  }
+    return txt.replace(/\n/g,'fffff').replace(/\s/g,'&nbsp;').replace(/fffff/g,'<br>');
+    }
 
 
 
