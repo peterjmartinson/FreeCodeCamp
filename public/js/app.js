@@ -8,12 +8,10 @@ $(document).ready(function() {
 
   $.get( challengeURL, function (response) {
     var fileText = response;
-    var oneChar = fileText.substring(0,2);
+    var oneChar = fileText.substring(0,fileText.indexOf('\n'));
     console.log("oneChar = " + oneChar);
 
-    $("#file-text").html( htmlCarriageReturned(fileText) );
-    // PROBLEM: carriage returns not honored
-    // SOLUTION: replace <cr> with <br />
+    $("#code-text").html( htmlCarriageReturned(fileText) );
 
 
 
