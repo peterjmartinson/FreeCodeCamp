@@ -1,9 +1,9 @@
 // TITLE: Reverse the String
 
-function reverseString(str) {
+var reverseString = function(str) {
   var strArray = str.split('');
   return strArray.reverse().join('');
   
 }
 
-// reverseString("hello");
+reverseString("hello");
