@@ -13,8 +13,9 @@ function Algorithm() {
   this.test = 'hello';
   this.reverseString = function(str) {
     var strArray = str.split('');
-    console.log(strArray.reverse().join(''));
-    return strArray.reverse().join('');
+    var output = strArray.reverse().join('');
+    console.log(output);
+    return output;
   }
 }
 
