@@ -26,12 +26,18 @@
     app.use(express.static(__dirname + '/public'));// set static files location
     app.use(morgan('dev'));                        // log requests to console
 
-    app.get('/index', function(req, res) {
+    // app.get('/index', function(req, res) {
+    app.get('/', function(req, res) {
       var a = algo.reverseString('express'),
           b = algo.reverseString('request'),
           c = algo.reverseString('peter'),
-          d = algo.reverseString('algorithms');
-      res.send(a + ' ' + b + ' ' + c + ' ' + d);
+          d = algo.reverseString('algorithms'),
+          jqCode = '$("#from-node").html( "hello" );';
+          // jqCode = '$("#from-node").html ( '
+          //         + a + ' ' + b + ' ' + c + ' ' + d
+          //         + ' );';
+      res.send('<script>'+jqCode+'</script>');
+      // res.send(a + ' ' + b + ' ' + c + ' ' + d);
     });
 
     // START APP ==============================================================
