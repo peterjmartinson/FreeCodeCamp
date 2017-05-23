@@ -7,9 +7,14 @@ describe('Steamroller', function() {
     assert.equal(typeof A.steamrollArray, 'function');
   });
 
-  it('steamrollArray([[["a"]], [["b"]]]) should return ["a", "b"]', function() {
-    assert.deepEqual(A.steamrollArray([[["a"]], [["b"]]]), ["a", "b"]);
+  it('should return an array', function() {
+    assert.deepEqual(A.steamrollArray([]), []);
   });
+
+  it('steamrollArray([[["a"]], [["b"]]]) should return ["a", "b"]', function() {
+    assert.deepEqual(A.steamrollArray([[['a']], [['b']]]), ['a', 'b']);
+  });
+
   it('steamrollArray([1, [2], [3, [[4]]]]) should return [1, 2, 3, 4]', function() {
     assert.deepEqual(A.steamrollArray([1, [2], [3, [[4]]]]), [1, 2, 3, 4]);
   });
